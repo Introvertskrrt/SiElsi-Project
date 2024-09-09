@@ -16,7 +16,7 @@ class IntroView extends StatelessWidget {
           children: [
             // Stack with circles
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.31,
+              height: 250,
               child: Stack(
                 children: [
                   // First circle

@@ -3,4 +3,7 @@ class AppRoutes {
   static String loginPage = "/loginPage";
   static String introPage = "/introPage";
   static String dashboardUmumPage = "/dashboardUmumPage";
+  static String dashboardPegawaiPage = "/dashboardPegawaiPage";
+  static String dashboardKeluargaPage = "/dashboardKeluargaPage";
+  static String siyasbiPage = "/siyasbiPage";
 }

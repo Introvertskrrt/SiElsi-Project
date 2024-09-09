@@ -31,20 +31,20 @@ class SiyasbiView extends StatelessWidget {
             ),
           ),
         ),
-        body: Column(
+        body: const Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               child: Column(
                 children: [
                   SizedBox(height: 18),
-                  const HeaderWidget(),
+                  HeaderWidget(),
                   SizedBox(height: 18),
-                  const BarWidget(),
+                  BarWidget(),
                   SizedBox(height: 18),
-                  const RemisiWidget(),
+                  RemisiWidget(),
                 ],
               ),
             ),
