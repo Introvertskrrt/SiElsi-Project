@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants/text_style_constant.dart';
 
 class BarWidget extends StatelessWidget {
-  const BarWidget({Key? key}) : super(key: key);
+  const BarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
