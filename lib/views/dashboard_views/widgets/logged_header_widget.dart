@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sibesi_app/constants/color_constant.dart';
 import 'package:sibesi_app/constants/text_style_constant.dart';
+import 'package:sibesi_app/utils/app_routes.dart';
 
 class LoggedHeaderWidget extends StatelessWidget {
   const LoggedHeaderWidget({super.key});
@@ -20,6 +22,22 @@ class LoggedHeaderWidget extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none, // Allow overflow in Stack
         children: [
+          Positioned(
+            top: 53,
+            right: 23,
+            child: InkWell(
+              onTap: () {
+                Get.offAllNamed(AppRoutes.dashboardUmumPage);
+              },
+              child: Text(
+                "Keluar",
+                style: TextStyleConstant.nunitoBold.copyWith(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ),
           Positioned(
             top: 122,
             left: 32,

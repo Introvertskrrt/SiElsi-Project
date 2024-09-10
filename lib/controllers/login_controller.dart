@@ -9,11 +9,11 @@ class LoginController extends GetxController {
   // make local auth method (only for prototype)
   Future<void> authLocal() async {
     if (email.value == "pegawai@gmail.com" && password.value == "1234") {
-      Get.toNamed(AppRoutes.dashboardPegawaiPage);
+      Get.offAllNamed(AppRoutes.dashboardPegawaiPage);
     }
 
     else if (email.value == "keluarga@gmail.com" && password.value == "1234") {
-      Get.toNamed(AppRoutes.dashboardKeluargaPage);
+      Get.offAllNamed(AppRoutes.dashboardKeluargaPage);
     } 
     
     else {
