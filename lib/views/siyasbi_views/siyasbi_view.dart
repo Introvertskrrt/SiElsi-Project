@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sibesi_app/constants/color_constant.dart';
-import '../../constants/text_style_constant.dart';
+import 'package:sibesi_app/constants/text_style_constant.dart';
+import 'package:sibesi_app/views/siyasbi_views/widgets/saldo_widget.dart';
 import 'widgets/header_widget.dart';
 import 'widgets/bar_widget.dart';
 import 'widgets/remisi_widget.dart';
@@ -10,28 +11,36 @@ class SiyasbiView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      // Memindahkan DefaultTabController ke sini
-      length: 4, // Jumlah tab
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'SiYASBI',
-            style: TextStyleConstant.nunitoBold.copyWith(
-              fontSize: 20,
-              color: Colors.white,
-            ),
+    return Scaffold(
+      backgroundColor: ColorConstant.primaryBackground,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.white,
+            size: 20,
           ),
-          centerTitle: true,
-          backgroundColor: ColorConstant.primaryColor,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20),
-            ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'SiYASBI',
+          style: TextStyleConstant.nunitoSemiBold.copyWith(
+            fontSize: 20,
+            color: Colors.white,
           ),
         ),
-        body: Column(
+        centerTitle: true,
+        backgroundColor: ColorConstant.primaryColor,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20),
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -45,6 +54,9 @@ class SiyasbiView extends StatelessWidget {
                   const BarWidget(),
                   SizedBox(height: 18),
                   const RemisiWidget(),
+                  SizedBox(height: 18),
+                  const SaldoWidget(),
+                  SizedBox(height: 30),
                 ],
               ),
             ),
