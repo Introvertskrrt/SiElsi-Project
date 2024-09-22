@@ -9,4 +9,6 @@ class AppRoutes {
   static String sigagakPage = "/sigagakPage";
   static String detailKegiatanPage = "/detailKegiatanPage";
   static String profiletahananPage = "/profileTahananPage";
+  static String pembinaanPage = "/pembinaanPage";
+  static String kesehatanPage = "/kesehatanPage";
 }
