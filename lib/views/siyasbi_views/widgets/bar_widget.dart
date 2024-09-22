@@ -5,7 +5,7 @@ import 'package:sibesi_app/constants/text_style_constant.dart';
 import 'package:sibesi_app/utils/app_routes.dart';
 
 class BarWidget extends StatelessWidget {
-  const BarWidget({Key? key}) : super(key: key);
+  const BarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

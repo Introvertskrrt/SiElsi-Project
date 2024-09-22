@@ -11,49 +11,43 @@ class SiyasbiView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorConstant.primaryBackground,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.white,
-            size: 20,
+    return DefaultTabController(
+      // Memindahkan DefaultTabController ke sini
+      length: 4, // Jumlah tab
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'SiYASBI',
+            style: TextStyleConstant.nunitoBold.copyWith(
+              fontSize: 20,
+              color: Colors.white,
+            ),
           ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Text(
-          'SiYASBI',
-          style: TextStyleConstant.nunitoSemiBold.copyWith(
-            fontSize: 20,
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: ColorConstant.primaryColor,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(20),
+          centerTitle: true,
+          backgroundColor: ColorConstant.primaryColor,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+            ),
           ),
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: const Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                 horizontal: 16,
               ),
               child: Column(
                 children: [
                   SizedBox(height: 18),
-                  const HeaderWidget(),
+                  HeaderWidget(),
                   SizedBox(height: 18),
-                  const BarWidget(),
+                  BarWidget(),
                   SizedBox(height: 18),
-                  const RemisiWidget(),
+                  RemisiWidget(),
                   SizedBox(height: 18),
                   const SaldoWidget(),
                   SizedBox(height: 30),

@@ -4,8 +4,8 @@ import 'package:sibesi_app/constants/color_constant.dart';
 import 'package:sibesi_app/constants/text_style_constant.dart';
 import 'package:sibesi_app/utils/app_routes.dart';
 
-class HeaderWidget extends StatelessWidget {
-  const HeaderWidget({super.key});
+class LoggedHeaderWidget extends StatelessWidget {
+  const LoggedHeaderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +27,10 @@ class HeaderWidget extends StatelessWidget {
             right: 23,
             child: InkWell(
               onTap: () {
-                Get.toNamed(AppRoutes.loginPage);
+                Get.offAllNamed(AppRoutes.dashboardUmumPage);
               },
               child: Text(
-                "Masuk",
+                "Keluar",
                 style: TextStyleConstant.nunitoBold.copyWith(
                   color: Colors.white,
                   fontSize: 20,
