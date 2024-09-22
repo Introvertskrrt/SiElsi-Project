@@ -9,210 +9,187 @@ class SaldoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(
-        left: 9,
-        right: 16,
-        top: 16,
-        bottom: 16,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.only(
-              bottom: 5,
-            ),
-            decoration: BoxDecoration(
-              border: Border(
-                  bottom: BorderSide(color: ColorConstant.primaryBackground)),
-            ),
-            child: Text(
-              'Saldo',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.black,
-              ),
-            ),
-          ),
+          _buildHeader(),
           const SizedBox(height: 16),
-          Center(
+          _buildAvailableBalance(),
+          const SizedBox(height: 10),
+          _buildBalanceDetails(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.only(bottom: 5),
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(color: ColorConstant.primaryBackground),
+        ),
+      ),
+      child: Text(
+        'Saldo',
+        style: TextStyle(fontSize: 16, color: Colors.black),
+      ),
+    );
+  }
+
+  Widget _buildAvailableBalance() {
+    return Center(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: ColorConstant.secondaryColor,
+        ),
+        child: Column(
+          children: [
+            Text(
+              'Saldo Tersedia',
+              style: TextStyleConstant.nunitoRegular.copyWith(
+                fontSize: 10,
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              'Rp 1.000.000',
+              style: TextStyleConstant.nunitoBold.copyWith(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBalanceDetails() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border(
+          top: BorderSide(color: ColorConstant.primaryBackground),
+        ),
+      ),
+      child: Column(
+        children: [
+          _buildBalanceRow('Saldo Masuk', 'Rp 1.500.000'),
+          _buildBalanceRow('Saldo Keluar', 'Rp 500.000'),
+          _buildDownloadRow('Riwayat Saldo Masuk'),
+          _buildDownloadRow('Riwayat Saldo Keluar'),
+          _buildShoppingListRow(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBalanceRow(String title, String amount) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyleConstant.nunitoRegular.copyWith(
+              fontSize: 12,
+              color: ColorConstant.paragraphTextColor,
+            ),
+          ),
+          Text(
+            amount,
+            style: TextStyleConstant.nunitoRegular.copyWith(
+              fontSize: 12,
+              color: ColorConstant.paragraphTextColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDownloadRow(String title) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyleConstant.nunitoRegular.copyWith(
+              fontSize: 12,
+              color: ColorConstant.paragraphTextColor,
+            ),
+          ),
+          GestureDetector(
+            onTap: () {},
             child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 60,
-                vertical: 30,
-              ),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: ColorConstant.secondaryColor,
+                border: Border(
+                  bottom: BorderSide(
+                    color: ColorConstant.primaryColor,
+                  ),
+                ),
               ),
-              child: Column(
-                children: [
-                  Text(
-                    'Saldo Tersedia',
-                    style: TextStyleConstant.nunitoRegular.copyWith(
-                      fontSize: 10,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Text(
-                    'Rp 1.000.000',
-                    style: TextStyleConstant.nunitoBold.copyWith(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
+              child: Text(
+                'Download',
+                style: TextStyleConstant.nunitoRegular.copyWith(
+                  fontSize: 12,
+                  color: ColorConstant.primaryColor,
+                ),
               ),
             ),
           ),
-          const SizedBox(height: 10),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 5),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border(
-                top: BorderSide(
-                  color: ColorConstant.primaryBackground,
-                ),
-              ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildShoppingListRow() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Daftar Belanja Hari Ini',
+            style: TextStyleConstant.nunitoRegular.copyWith(
+              fontSize: 12,
+              color: ColorConstant.paragraphTextColor,
             ),
-            child: Column(
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: Row(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Saldo Masuk',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                    Text(
-                      'Rp 1.500.000',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                  ],
+                Text(
+                  'Lihat',
+                  style: TextStyleConstant.nunitoRegular.copyWith(
+                    fontSize: 12,
+                    color: ColorConstant.primaryColor,
+                  ),
                 ),
-                const SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Saldo Keluar',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                    Text(
-                      'Rp 500.000',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Riwayat Saldo Masuk',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            color: ColorConstant.primaryColor,
-                          ),
-                        ),
-                      ),
-                      child: Text(
-                        'Download',
-                        style: TextStyleConstant.nunitoRegular.copyWith(
-                          fontSize: 12,
-                          color: ColorConstant.primaryColor,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Riwayat Saldo Keluar',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            color: ColorConstant.primaryColor,
-                          ),
-                        ),
-                      ),
-                      child: Text(
-                        'Download',
-                        style: TextStyleConstant.nunitoRegular.copyWith(
-                          fontSize: 12,
-                          color: ColorConstant.primaryColor,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 15),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Daftar Belanja Hari Ini',
-                      style: TextStyleConstant.nunitoRegular.copyWith(
-                        fontSize: 12,
-                        color: ColorConstant.paragraphTextColor,
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          'Lihat',
-                          style: TextStyleConstant.nunitoRegular.copyWith(
-                            fontSize: 12,
-                            color: ColorConstant.primaryColor,
-                          ),
-                        ),
-                        const SizedBox(width: 5),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: ColorConstant.primaryColor,
-                          size: 10,
-                        ),
-                      ],
-                    )
-                  ],
+                const SizedBox(width: 5),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  color: ColorConstant.primaryColor,
+                  size: 10,
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
