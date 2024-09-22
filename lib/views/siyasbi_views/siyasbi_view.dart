@@ -32,29 +32,29 @@ class SiyasbiView extends StatelessWidget {
             ),
           ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: const Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 16,
+        body: SingleChildScrollView(
+          child: const Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16,
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 18),
+                    HeaderWidget(),
+                    SizedBox(height: 18),
+                    BarWidget(),
+                    SizedBox(height: 18),
+                    RemisiWidget(),
+                    SizedBox(height: 18),
+                    const SaldoWidget(),
+                    SizedBox(height: 30),
+                  ],
+                ),
               ),
-              child: Column(
-                children: [
-                  SizedBox(height: 18),
-                  HeaderWidget(),
-                  SizedBox(height: 18),
-                  BarWidget(),
-                  SizedBox(height: 18),
-                  RemisiWidget(),
-                  SizedBox(height: 18),
-                  const SaldoWidget(),
-                  SizedBox(height: 30),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

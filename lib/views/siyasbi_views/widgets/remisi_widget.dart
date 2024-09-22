@@ -64,7 +64,7 @@ class RemisiWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Sisa Pidana Setelah Potongan Remisi',
+                        'Sisa pidana setelah remisi',
                         style: TextStyleConstant.nunitoRegular.copyWith(
                           fontSize: 14,
                           color: Colors.black,
@@ -105,14 +105,14 @@ class RemisiWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Tanggal Bebas Menjalani Pidana',
+                      'Tanggal bebas menjalani pidana',
                       style: TextStyleConstant.nunitoRegular.copyWith(
                         fontSize: 14,
                         color: Colors.black,
                       ),
                     ),
                     Text(
-                      '12-12-2021',
+                      '12 Februari 2025',
                       style: TextStyleConstant.nunitoRegular.copyWith(
                         fontSize: 10,
                         color: ColorConstant.paragraphTextColor,
