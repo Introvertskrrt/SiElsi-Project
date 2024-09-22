@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../constants/text_style_constant.dart';
+import 'package:get/get.dart';
+import 'package:sibesi_app/constants/text_style_constant.dart';
+import 'package:sibesi_app/utils/app_routes.dart';
 
 class BarWidget extends StatelessWidget {
   const BarWidget({super.key});
@@ -18,18 +19,24 @@ class BarWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Column(
-            children: [
-              SvgPicture.asset('assets/svg/profile.svg', width: 30, height: 30),
-              const SizedBox(height: 8),
-              Text(
-                'Profile',
-                style: TextStyleConstant.nunitoRegular.copyWith(
-                  fontSize: 10,
-                  color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Get.toNamed(AppRoutes.profiletahananPage);
+            },
+            child: Column(
+              children: [
+                SvgPicture.asset('assets/svg/profile.svg',
+                    width: 30, height: 30),
+                const SizedBox(height: 8),
+                Text(
+                  'Profile',
+                  style: TextStyleConstant.nunitoRegular.copyWith(
+                    fontSize: 10,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Column(
             children: [
