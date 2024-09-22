@@ -6,4 +6,6 @@ class AppRoutes {
   static String dashboardPegawaiPage = "/dashboardPegawaiPage";
   static String dashboardKeluargaPage = "/dashboardKeluargaPage";
   static String siyasbiPage = "/siyasbiPage";
+  static String sigagakPage = "/sigagakPage";
+  static String detailKegiatanPage = "/detailKegiatanPage";
 }

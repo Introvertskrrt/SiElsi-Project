@@ -6,6 +6,8 @@ import 'package:sibesi_app/views/dashboard_views/dashboard_pegawai_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_umum_view.dart';
 import 'package:sibesi_app/views/intro_views/intro_view.dart';
 import 'package:sibesi_app/views/login_views/login_view.dart';
+import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
+import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/siyasbi_view.dart';
 import 'package:sibesi_app/views/splashscreen/splash_screen.dart';
 
@@ -40,6 +42,14 @@ void main() {
       GetPage(
         name: AppRoutes.loginPage,
         page: () => LoginView(),
+      ),
+      GetPage(
+        name: AppRoutes.sigagakPage,
+        page: () => const SigagakView(),
+      ),
+      GetPage(
+        name: AppRoutes.detailKegiatanPage,
+        page: () => DetailKegiatanView(),
       ),
     ],
   ));

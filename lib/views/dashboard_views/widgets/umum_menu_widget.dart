@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sibesi_app/constants/color_constant.dart';
 import 'package:sibesi_app/constants/text_style_constant.dart';
+import 'package:sibesi_app/utils/app_routes.dart';
 
 class UmumMenuWidget extends StatelessWidget {
   const UmumMenuWidget({super.key});
@@ -26,7 +27,7 @@ class UmumMenuWidget extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.sigagakPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/SiGagak.png",
