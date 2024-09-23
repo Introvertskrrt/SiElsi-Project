@@ -8,6 +8,7 @@ import 'package:sibesi_app/views/intro_views/intro_view.dart';
 import 'package:sibesi_app/views/login_views/login_view.dart';
 import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
+import 'package:sibesi_app/views/siyasbi_views/pesan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/profile_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/siyasbi_view.dart';
 import 'package:sibesi_app/views/splashscreen/splash_screen.dart';
@@ -55,6 +56,10 @@ void main() {
       GetPage(
         name: AppRoutes.profiletahananPage,
         page: () => const ProfileTahananView(),
+      ),
+      GetPage(
+        name: AppRoutes.pesanPage,
+        page: () => PesanView(),
       ),
     ],
   ));
