@@ -38,31 +38,41 @@ class BarWidget extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            children: [
-              SvgPicture.asset('assets/svg/pembinaan.svg', width: 30),
-              const SizedBox(height: 8),
-              Text(
-                'Pembinaan',
-                style: TextStyleConstant.nunitoRegular.copyWith(
-                  fontSize: 10,
-                  color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Get.toNamed(AppRoutes.pembinaanPage);
+            },
+            child: Column(
+              children: [
+                SvgPicture.asset('assets/svg/pembinaan.svg', width: 30),
+                const SizedBox(height: 8),
+                Text(
+                  'Pembinaan',
+                  style: TextStyleConstant.nunitoRegular.copyWith(
+                    fontSize: 10,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-          Column(
-            children: [
-              SvgPicture.asset('assets/svg/kesehatan.svg', width: 30),
-              const SizedBox(height: 8),
-              Text(
-                'Kesehatan',
-                style: TextStyleConstant.nunitoRegular.copyWith(
-                  fontSize: 10,
-                  color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Get.toNamed(AppRoutes.kesehatanPage);
+            },
+            child: Column(
+              children: [
+                SvgPicture.asset('assets/svg/kesehatan.svg', width: 30),
+                const SizedBox(height: 8),
+                Text(
+                  'Kesehatan',
+                  style: TextStyleConstant.nunitoRegular.copyWith(
+                    fontSize: 10,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           GestureDetector(
             onTap: () {
