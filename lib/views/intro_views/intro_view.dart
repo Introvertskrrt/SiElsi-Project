@@ -42,20 +42,84 @@ class IntroView extends StatelessWidget {
             ),
             Image.asset('assets/images/logo_sibesi.png'),
             const SizedBox(height: 10),
-            Text(
-              "Trust everything with Si'BESI",
-              style: TextStyleConstant.nunitoBold.copyWith(fontSize: 18),
-            ),
-            const SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.only(left: 80, right: 80),
-              child: Text(
-                "Si’Elsi merupakan pelayanan sipil dan pelayanan publik, khususnya bagi masyarakat sekitar atau masyarakat luas.",
-                style: TextStyleConstant.nunitoParagraph.copyWith(fontSize: 14),
-                textAlign: TextAlign.center,
+            RichText(
+              text: TextSpan(
+                text: 'APLIKASI SI',
+                style: TextStyleConstant.nunitoBold.copyWith(
+                  fontSize: 18,
+                  color: Colors.black,
+                ),
+                children: [
+                  TextSpan(
+                    text: '\'',
+                    style: TextStyleConstant.nunitoBold.copyWith(
+                      fontSize: 18,
+                      color: ColorConstant.primaryColor,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'eL',
+                    style: TextStyleConstant.nunitoBold.copyWith(
+                      fontSize: 18,
+                      color: Colors.blueAccent,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'Si',
+                    style: TextStyleConstant.nunitoBold.copyWith(
+                      fontSize: 18,
+                      color: ColorConstant.primaryColor,
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.only(left: 50, right: 50),
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  text: 'SI',
+                  style: TextStyleConstant.nunitoParagraph.copyWith(
+                    fontSize: 14,
+                    color: Colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: '\'',
+                      style: TextStyleConstant.nunitoParagraph.copyWith(
+                        fontSize: 14,
+                        color: ColorConstant.primaryColor,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'eL',
+                      style: TextStyleConstant.nunitoParagraph.copyWith(
+                        fontSize: 14,
+                        color: Colors.blueAccent,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Si',
+                      style: TextStyleConstant.nunitoParagraph.copyWith(
+                        fontSize: 14,
+                        color: ColorConstant.primaryColor,
+                      ),
+                    ),
+                    TextSpan(
+                      text:
+                          ' Aplikasi Layanan Inovasi Serta Pelayanan Terpadu Satu Pintu Lapas Kelas IIA Besi Nusakambangan (Maximum Security) Untuk Melayani Sepenuh Hati\, Bagi Masyarakat Dalam Mengakses Informasi Dengan Mudah, Cepat dan Transparan',
+                      style: TextStyleConstant.nunitoParagraph.copyWith(
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
             Center(
               child: SizedBox(
                 width: MediaQuery.of(context).size.width - 25,
@@ -71,12 +135,13 @@ class IntroView extends StatelessWidget {
                   },
                   child: Text(
                     "Memulai",
-                    style: TextStyleConstant.nunitoButton.copyWith(fontSize: 20),
+                    style:
+                        TextStyleConstant.nunitoButton.copyWith(fontSize: 20),
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 20),
           ],
         ),
       ),
