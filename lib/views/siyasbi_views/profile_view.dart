@@ -24,7 +24,14 @@ class ProfileTahananView extends StatelessWidget {
               ),
             ),
             Text(
-              'Warga Binaan',
+              'WARGA BINAAN PEMASYARAKATAN',
+              style: TextStyleConstant.nunitoRegular.copyWith(
+                fontSize: 12,
+                color: ColorConstant.paragraphTextColor,
+              ),
+            ),
+            Text(
+              'BLOCK D KAMAR 10',
               style: TextStyleConstant.nunitoRegular.copyWith(
                 fontSize: 12,
                 color: ColorConstant.paragraphTextColor,
