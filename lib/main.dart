@@ -11,6 +11,7 @@ import 'package:sibesi_app/views/login_views/login_role_view.dart';
 import 'package:sibesi_app/views/login_views/login_pegawai_view.dart';
 import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
+import 'package:sibesi_app/views/sinamu_views/sinamu_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/daftar_belanja_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/kesehatan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/pembinaan_view.dart';
@@ -90,6 +91,10 @@ void main() {
       GetPage(
         name: AppRoutes.bemartPage,
         page: () => const BemartView(),
+      ),
+      GetPage(
+        name: AppRoutes.sinamuPage,
+        page: () => const SinamuView(),
       ),
     ],
   ));
