@@ -41,8 +41,8 @@ class SiyasbiView extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: const Column(
+      body: const SingleChildScrollView(
+        child: Column(
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
@@ -57,7 +57,7 @@ class SiyasbiView extends StatelessWidget {
                   SizedBox(height: 18),
                   RemisiWidget(),
                   SizedBox(height: 18),
-                  const SaldoWidget(),
+                  SaldoWidget(),
                   SizedBox(height: 30),
                 ],
               ),

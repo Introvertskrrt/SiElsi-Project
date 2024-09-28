@@ -38,7 +38,7 @@ class KeluargaMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.bemartPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/BeMart.png",
