@@ -6,8 +6,8 @@ import 'package:sibesi_app/controllers/login_controller.dart';
 // ignore: unused_import
 import 'package:sibesi_app/utils/app_routes.dart';
 
-class LoginView extends StatelessWidget {
-  LoginView({super.key});
+class LoginMasyarakatView extends StatelessWidget {
+  LoginMasyarakatView({super.key});
 
   final controller = Get.put(LoginController());
 
@@ -46,12 +46,22 @@ class LoginView extends StatelessWidget {
               ),
             ),
             Text(
-              "Welcome back!",
+              "SUGENG RAWUH\nSEDEREK KELUARGA",
               style: TextStyleConstant.nunitoBold.copyWith(fontSize: 18),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 25),
             Image.asset('assets/images/login_image.png'),
-            const SizedBox(height: 58),
+            const SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Text(
+                "Melayani Dengan Hati Tanpa Diskriminasi",
+                style: TextStyleConstant.nunitoRegular.copyWith(fontSize: 16),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.only(left: 32, right: 32),
               child: Container(
@@ -159,7 +169,7 @@ class LoginView extends StatelessWidget {
                     ),
                   ),
                   onPressed: () async {
-                    await controller.authLocal();
+                    await controller.authKeluarga();
                   },
                   child: Text(
                     "Masuk",

@@ -7,16 +7,19 @@ class LoginController extends GetxController {
   RxString password = "".obs;
 
   // make local auth method (only for prototype)
-  Future<void> authLocal() async {
+  Future<void> authPegawai() async {
     if (email.value == "pegawai@gmail.com" && password.value == "1234") {
       Get.offAllNamed(AppRoutes.dashboardPegawaiPage);
+    } else {
+      Get.dialog(const ErrorDialogGlobalWidget(
+          errorMessage: "email atau password salah!"));
     }
+  }
 
-    else if (email.value == "keluarga@gmail.com" && password.value == "1234") {
+  Future<void> authKeluarga() async {
+    if (email.value == "keluarga@gmail.com" && password.value == "1234") {
       Get.offAllNamed(AppRoutes.dashboardKeluargaPage);
-    } 
-    
-    else {
+    } else {
       Get.dialog(const ErrorDialogGlobalWidget(
           errorMessage: "email atau password salah!"));
     }

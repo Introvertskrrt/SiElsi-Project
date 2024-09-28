@@ -1,6 +1,6 @@
 class AppRoutes {
   static String splashScreen = "/splashScreen";
-  static String loginPage = "/loginPage";
+  static String loginPegawaiPage = "/loginPegawaiPage";
   static String introPage = "/introPage";
   static String dashboardUmumPage = "/dashboardUmumPage";
   static String dashboardPegawaiPage = "/dashboardPegawaiPage";
@@ -12,4 +12,7 @@ class AppRoutes {
   static String pesanPage = "/pesanPage";
   static String pembinaanPage = "/pembinaanPage";
   static String kesehatanPage = "/kesehatanPage";
+  static String daftarBelanjaPage = "/daftarBelanjaPage";
+  static String loginRolePage = "/loginRolePage";
+  static String loginMasyarakatPage = "/loginMasyarakatPage";
 }

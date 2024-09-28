@@ -5,9 +5,12 @@ import 'package:sibesi_app/views/dashboard_views/dashboard_keluarga_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_pegawai_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_umum_view.dart';
 import 'package:sibesi_app/views/intro_views/intro_view.dart';
-import 'package:sibesi_app/views/login_views/login_view.dart';
+import 'package:sibesi_app/views/login_views/login_masyarakat_view.dart';
+import 'package:sibesi_app/views/login_views/login_role_view.dart';
+import 'package:sibesi_app/views/login_views/login_pegawai_view.dart';
 import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
+import 'package:sibesi_app/views/siyasbi_views/daftar_belanja_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/kesehatan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/pembinaan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/pesan_view.dart';
@@ -44,8 +47,8 @@ void main() {
         page: () => const SiyasbiView(),
       ),
       GetPage(
-        name: AppRoutes.loginPage,
-        page: () => LoginView(),
+        name: AppRoutes.loginPegawaiPage,
+        page: () => LoginPegawaiView(),
       ),
       GetPage(
         name: AppRoutes.sigagakPage,
@@ -71,6 +74,18 @@ void main() {
         name: AppRoutes.kesehatanPage,
         page: () => const KesehatanView(),
       ),
+      GetPage(
+        name: AppRoutes.daftarBelanjaPage,
+        page: () => DaftarBelanjaView(),
+      ),
+      GetPage(
+        name: AppRoutes.loginRolePage,
+        page: () => LoginRoleView(),
+      ),
+      GetPage(
+        name: AppRoutes.loginMasyarakatPage,
+        page: () => LoginMasyarakatView(),
+      )
     ],
   ));
 }

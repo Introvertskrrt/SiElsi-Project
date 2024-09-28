@@ -42,20 +42,83 @@ class IntroView extends StatelessWidget {
             ),
             Image.asset('assets/images/logo_sibesi.png'),
             const SizedBox(height: 10),
-            Text(
-              "Trust everything with Si'BESI",
-              style: TextStyleConstant.nunitoBold.copyWith(fontSize: 18),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Aplikasi ",
+                  style: TextStyleConstant.nunitoBold.copyWith(fontSize: 18),
+                ),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Si'",
+                        style: TextStyleConstant.nunitoBold.copyWith(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "eL",
+                        style: TextStyleConstant.nunitoBold.copyWith(
+                          fontSize: 18,
+                          color: Colors.blue,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "Si",
+                        style: TextStyleConstant.nunitoBold.copyWith(
+                          fontSize: 18,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(left: 80, right: 80),
-              child: Text(
-                "Si’Elsi merupakan pelayanan sipil dan pelayanan publik, khususnya bagi masyarakat sekitar atau masyarakat luas.",
-                style: TextStyleConstant.nunitoParagraph.copyWith(fontSize: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: RichText(
                 textAlign: TextAlign.center,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "Si'",
+                      style: TextStyleConstant.nunitoBold.copyWith(
+                        fontSize: 14,
+                        color: Colors.black, // warna merah untuk 'Si'
+                      ),
+                    ),
+                    TextSpan(
+                      text: "eL",
+                      style: TextStyleConstant.nunitoBold.copyWith(
+                        fontSize: 14,
+                        color: Colors.blue, // warna biru untuk 'eL'
+                      ),
+                    ),
+                    TextSpan(
+                      text: "Si",
+                      style: TextStyleConstant.nunitoBold.copyWith(
+                        fontSize: 14,
+                        color: Colors.red, // warna merah untuk 'Si'
+                      ),
+                    ),
+                    TextSpan(
+                      text:
+                          " Aplikasi Layanan Inovasi Serta Pelayanan Terpadu Satu Pintu Lapas Kelas II A Besi Nusakambangan (Maximum Security) Untuk Melayani Sepenuh Hati, Bagi Masyarakat Dalam Mengakses Informasi Dengan Mudah, Cepat dan Transparan",
+                      style: TextStyleConstant.nunitoParagraph.copyWith(
+                        fontSize: 14,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 40),
             Center(
               child: SizedBox(
                 width: MediaQuery.of(context).size.width - 25,

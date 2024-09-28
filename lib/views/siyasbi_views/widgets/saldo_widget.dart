@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sibesi_app/constants/color_constant.dart';
 import 'package:sibesi_app/constants/text_style_constant.dart';
+import 'package:sibesi_app/utils/app_routes.dart';
 
 class SaldoWidget extends StatelessWidget {
   const SaldoWidget({super.key});
@@ -171,7 +173,9 @@ class SaldoWidget extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.toNamed(AppRoutes.daftarBelanjaPage);
+            },
             child: Row(
               children: [
                 Text(

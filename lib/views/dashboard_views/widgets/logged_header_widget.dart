@@ -13,6 +13,10 @@ class LoggedHeaderWidget extends StatelessWidget {
       width: double.infinity,
       height: 286,
       decoration: BoxDecoration(
+        image: const DecorationImage(
+          image: AssetImage("assets/images/foto_depan_lapas.jpg"),
+          fit: BoxFit.fill,
+        ),
         color: ColorConstant.primaryColor,
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(35),
@@ -32,7 +36,7 @@ class LoggedHeaderWidget extends StatelessWidget {
               child: Text(
                 "Keluar",
                 style: TextStyleConstant.nunitoBold.copyWith(
-                  color: Colors.white,
+                  color: ColorConstant.primaryColor,
                   fontSize: 20,
                 ),
               ),
@@ -45,14 +49,14 @@ class LoggedHeaderWidget extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: "Selamat Datang\n",
+                    text: "Sugeng Rawuh Sederek Dhayoh\n",
                     style: TextStyleConstant.nunitoBold.copyWith(
                       color: Colors.white,
                       fontSize: 20,
                     ),
                   ),
                   TextSpan(
-                    text: "Di Layanan Satu Pintu",
+                    text: "Di Layanan Si ‘eLSi Lapas\nKelas II A Besi Nusakambangan",
                     style: TextStyleConstant.nunitoBold.copyWith(
                       color: Colors.white,
                       fontSize: 17,
@@ -63,7 +67,7 @@ class LoggedHeaderWidget extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 66,
+            bottom: 45,
             left: 32,
             child: SizedBox(
               width: 230,
@@ -78,8 +82,8 @@ class LoggedHeaderWidget extends StatelessWidget {
           ),
           // Properly positioned the image
           Positioned(
-            right: 16, // Move it slightly outside the container
-            bottom: -30, // Position it at the bottom
+            right: 5, // Move it slightly outside the container
+            bottom: -50, // Position it at the bottom
             child: Image.asset(
               'assets/images/police.png',
               height: 200, // Adjust the height if needed
