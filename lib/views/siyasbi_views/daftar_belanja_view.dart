@@ -34,11 +34,11 @@ class DaftarBelanjaView extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
-            const DaftarBelanjaHeaderWidget(),
-            const SizedBox(height: 22),
+            DaftarBelanjaHeaderWidget(),
+            SizedBox(height: 22),
             DaftarBelanjaListWidget(),
           ],
         ),

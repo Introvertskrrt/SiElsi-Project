@@ -51,7 +51,7 @@ class RemisiWidget extends StatelessWidget {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.2),
                     blurRadius: 5,
-                    offset: Offset(3, 3),
+                    offset: const Offset(3, 3),
                   ),
                 ],
               ),
@@ -59,7 +59,7 @@ class RemisiWidget extends StatelessWidget {
                 children: [
                   SvgPicture.asset('assets/svg/sisa_pidana.svg',
                       width: 50, height: 50),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -92,7 +92,7 @@ class RemisiWidget extends StatelessWidget {
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),
                   blurRadius: 5,
-                  offset: Offset(3, 3),
+                  offset: const Offset(3, 3),
                 ),
               ],
             ),
@@ -100,7 +100,7 @@ class RemisiWidget extends StatelessWidget {
               children: [
                 SvgPicture.asset('assets/svg/tanggal_bebas.svg',
                     width: 50, height: 50),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -123,7 +123,7 @@ class RemisiWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.only(bottom: 5, left: 5),
@@ -157,7 +157,7 @@ class RemisiWidget extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(width: 5),
+                    const SizedBox(width: 5),
                     Icon(
                       Icons.arrow_forward_ios,
                       color: ColorConstant.primaryColor,

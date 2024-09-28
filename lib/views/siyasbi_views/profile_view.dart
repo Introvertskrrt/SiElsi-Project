@@ -14,8 +14,8 @@ class ProfileTahananView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderProfileWidget(),
-            SizedBox(height: 65),
+            const HeaderProfileWidget(),
+            const SizedBox(height: 65),
             Text(
               'Full Name',
               style: TextStyleConstant.nunitoSemiBold.copyWith(
@@ -119,7 +119,7 @@ class ProfileTahananView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
             color: ColorConstant.primaryBackground,
-            border: Border.all(color: Color.fromRGBO(215, 215, 215, 100)),
+            border: Border.all(color: const Color.fromRGBO(215, 215, 215, 100)),
           ),
           child: Row(
             children: [
@@ -156,7 +156,7 @@ class ProfileTahananView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
             color: ColorConstant.primaryBackground,
-            border: Border.all(color: Color.fromRGBO(215, 215, 215, 100)),
+            border: Border.all(color: const Color.fromRGBO(215, 215, 215, 100)),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sibesi_app/utils/app_routes.dart';
+import 'package:sibesi_app/views/bemart_views/bemart_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_keluarga_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_pegawai_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_umum_view.dart';
@@ -76,7 +77,7 @@ void main() {
       ),
       GetPage(
         name: AppRoutes.daftarBelanjaPage,
-        page: () => DaftarBelanjaView(),
+        page: () => const DaftarBelanjaView(),
       ),
       GetPage(
         name: AppRoutes.loginRolePage,
@@ -85,7 +86,11 @@ void main() {
       GetPage(
         name: AppRoutes.loginMasyarakatPage,
         page: () => LoginMasyarakatView(),
-      )
+      ),
+      GetPage(
+        name: AppRoutes.bemartPage,
+        page: () => const BemartView(),
+      ),
     ],
   ));
 }

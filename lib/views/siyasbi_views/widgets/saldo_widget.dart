@@ -38,7 +38,7 @@ class SaldoWidget extends StatelessWidget {
           bottom: BorderSide(color: ColorConstant.primaryBackground),
         ),
       ),
-      child: Text(
+      child: const Text(
         'Saldo',
         style: TextStyle(fontSize: 16, color: Colors.black),
       ),

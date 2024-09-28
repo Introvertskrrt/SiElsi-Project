@@ -45,3 +45,4 @@ class DetailKegiatanView extends StatelessWidget {
     );
   }
 }
+
