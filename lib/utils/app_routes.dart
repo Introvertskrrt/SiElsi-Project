@@ -17,4 +17,5 @@ class AppRoutes {
   static String loginMasyarakatPage = "/loginMasyarakatPage";
   static String bemartPage = "/bemartPage";
   static String sinamuPage = "/sinamuPage";
+  static String kepuasanPage = "/kepuasanPage";
 }
