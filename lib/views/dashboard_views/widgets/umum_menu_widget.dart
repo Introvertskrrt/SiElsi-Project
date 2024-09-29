@@ -38,7 +38,7 @@ class UmumMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.sinamuPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/SiNamu.png",

@@ -6,6 +6,7 @@ import 'package:sibesi_app/views/dashboard_views/dashboard_keluarga_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_pegawai_view.dart';
 import 'package:sibesi_app/views/dashboard_views/dashboard_umum_view.dart';
 import 'package:sibesi_app/views/intro_views/intro_view.dart';
+import 'package:sibesi_app/views/kepuasan_views/kepuasan_view.dart';
 import 'package:sibesi_app/views/login_views/login_masyarakat_view.dart';
 import 'package:sibesi_app/views/login_views/login_role_view.dart';
 import 'package:sibesi_app/views/login_views/login_pegawai_view.dart';
@@ -95,6 +96,10 @@ void main() {
       GetPage(
         name: AppRoutes.sinamuPage,
         page: () => const SinamuView(),
+      ),
+      GetPage(
+        name: AppRoutes.kepuasanPage,
+        page: () => const KepuasanView(),
       ),
     ],
   ));
