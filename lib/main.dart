@@ -20,6 +20,10 @@ import 'package:sibesi_app/views/siyasbi_views/pesan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/profile_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/siyasbi_view.dart';
 import 'package:sibesi_app/views/splashscreen/splash_screen.dart';
+import 'package:sibesi_app/views/teladan_views/menu_teladan_view.dart';
+import 'package:sibesi_app/views/teladan_views/daftar_petugas_view.dart';
+import 'package:sibesi_app/views/teladan_views/biodata_petugas.dart';
+import 'package:sibesi_app/views/teladan_views/petugas_teladan.dart';
 
 void main() {
   runApp(GetMaterialApp(
@@ -100,6 +104,22 @@ void main() {
       GetPage(
         name: AppRoutes.kepuasanPage,
         page: () => const KepuasanView(),
+      ),
+      GetPage(
+        name: AppRoutes.teladanPage,
+        page: () => const TeladanView(),
+      ),
+      GetPage(
+        name: AppRoutes.daftarPetugasPage,
+        page: () => const DaftarPetugasView(),
+      ),
+      GetPage(
+        name: AppRoutes.biodataPetugasPage,
+        page: () => const BiodataPetugasView(),
+      ),
+      GetPage(
+        name: AppRoutes.petugasTeladanPage,
+        page: () => const PetugasTeladanView(),
       ),
     ],
   ));
