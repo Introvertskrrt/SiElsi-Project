@@ -20,6 +20,7 @@ import 'package:sibesi_app/views/siyasbi_views/pembinaan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/pesan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/profile_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/siyasbi_view.dart';
+import 'package:sibesi_app/views/socialmedia_views/socialmedia_view.dart';
 import 'package:sibesi_app/views/splashscreen/splash_screen.dart';
 
 void main() {
@@ -105,6 +106,10 @@ void main() {
       GetPage(
         name: AppRoutes.silabesPage,
         page: () => const SilabesView(),
+      ),
+      GetPage(
+        name: AppRoutes.socialmediaPage,
+        page: () => const SocialmediaView(),
       ),
     ],
   ));
