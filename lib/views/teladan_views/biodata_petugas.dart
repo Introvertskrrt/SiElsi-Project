@@ -55,7 +55,7 @@ class BiodataPetugasView extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 300,
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border(
