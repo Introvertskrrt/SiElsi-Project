@@ -10,6 +10,8 @@ import 'package:sibesi_app/views/kepuasan_views/kepuasan_view.dart';
 import 'package:sibesi_app/views/login_views/login_masyarakat_view.dart';
 import 'package:sibesi_app/views/login_views/login_role_view.dart';
 import 'package:sibesi_app/views/login_views/login_pegawai_view.dart';
+import 'package:sibesi_app/views/pengaduan_views/pengaduan_terlapor_view.dart';
+import 'package:sibesi_app/views/pengaduan_views/pengaduan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
 import 'package:sibesi_app/views/sinamu_views/sinamu_view.dart';
@@ -101,6 +103,13 @@ void main() {
         name: AppRoutes.kepuasanPage,
         page: () => const KepuasanView(),
       ),
+      GetPage(
+        name: AppRoutes.pengaduanPage,
+        page: () => const PengaduanView(),
+      ),
+      GetPage(
+          name: AppRoutes.pengaduanTerlaporPage,
+          page: () => const PengaduanTerlaporView())
     ],
   ));
 }
