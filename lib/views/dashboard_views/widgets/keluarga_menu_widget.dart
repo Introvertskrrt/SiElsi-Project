@@ -80,7 +80,7 @@ class KeluargaMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.silabesPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Silabes.png",
@@ -91,7 +91,7 @@ class KeluargaMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.socialmediaPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Sosmed.png",
