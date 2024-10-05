@@ -41,14 +41,16 @@ class TeladanView extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 36),
+          padding: const EdgeInsets.all(36),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MenuCard(
                 iconPath: 'assets/svg/pegawai_teladan.svg',
                 title: 'Lihat Pegawai Teladan',
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(AppRoutes.petugasTeladanPage);
+                },
               ),
               const SizedBox(height: 30),
               MenuCard(
@@ -105,7 +107,7 @@ class MenuCard extends StatelessWidget {
               child: Text(
                 title,
                 style: TextStyleConstant.nunitoSemiBold.copyWith(
-                  fontSize: 18,
+                  fontSize: 14,
                   color: Colors.black,
                 ),
               ),
@@ -115,7 +117,7 @@ class MenuCard extends StatelessWidget {
             icon: const Icon(
               Icons.arrow_forward_ios,
               color: Colors.black,
-              size: 20,
+              size: 14,
             ),
             onPressed: onPressed,
           ),
