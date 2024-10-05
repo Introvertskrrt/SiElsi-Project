@@ -49,7 +49,7 @@ class KeluargaMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.teladanPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Teladan.png",
