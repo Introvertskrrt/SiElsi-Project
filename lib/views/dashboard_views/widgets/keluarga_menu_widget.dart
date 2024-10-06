@@ -122,7 +122,7 @@ class KeluargaMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.pengaduanPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Pengaduan.png",
