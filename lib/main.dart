@@ -14,6 +14,7 @@ import 'package:sibesi_app/views/pengaduan_views/pengaduan_terlapor_view.dart';
 import 'package:sibesi_app/views/pengaduan_views/pengaduan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
+import 'package:sibesi_app/views/silabes_views/silabes_view.dart';
 import 'package:sibesi_app/views/sinamu_views/sinamu_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/daftar_belanja_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/kesehatan_view.dart';
@@ -21,7 +22,12 @@ import 'package:sibesi_app/views/siyasbi_views/pembinaan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/pesan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/profile_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/siyasbi_view.dart';
+import 'package:sibesi_app/views/socialmedia_views/socialmedia_view.dart';
 import 'package:sibesi_app/views/splashscreen/splash_screen.dart';
+import 'package:sibesi_app/views/teladan_views/menu_teladan_view.dart';
+import 'package:sibesi_app/views/teladan_views/daftar_petugas_view.dart';
+import 'package:sibesi_app/views/teladan_views/biodata_petugas.dart';
+import 'package:sibesi_app/views/teladan_views/petugas_teladan.dart';
 
 void main() {
   runApp(GetMaterialApp(
@@ -110,6 +116,30 @@ void main() {
       GetPage(
           name: AppRoutes.pengaduanTerlaporPage,
           page: () => const PengaduanTerlaporView())
+      GetPage(
+        name: AppRoutes.teladanPage,
+        page: () => const TeladanView(),
+      ),
+      GetPage(
+        name: AppRoutes.daftarPetugasPage,
+        page: () => const DaftarPetugasView(),
+      ),
+      GetPage(
+        name: AppRoutes.biodataPetugasPage,
+        page: () => const BiodataPetugasView(),
+      ),
+      GetPage(
+        name: AppRoutes.petugasTeladanPage,
+        page: () => const PetugasTeladanView(),
+      ),
+      GetPage(
+        name: AppRoutes.silabesPage,
+        page: () => const SilabesView(),
+      ),
+      GetPage(
+        name: AppRoutes.socialmediaPage,
+        page: () => const SocialmediaView(),
+      ),
     ],
   ));
 }
