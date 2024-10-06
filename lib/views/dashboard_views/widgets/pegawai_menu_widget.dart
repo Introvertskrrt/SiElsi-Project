@@ -70,7 +70,7 @@ class PegawaiMenuWidget extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.toNamed(AppRoutes.teladanPage);
+                  Get.toNamed(AppRoutes.pengaduanPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Pengaduan.png",
