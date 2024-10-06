@@ -26,4 +26,5 @@ class AppRoutes {
   static String petugasTeladanPage = "/petugasTeladanPage";
   static String silabesPage = "/silabesPage";
   static String socialmediaPage = "/socialmediaPage";
+  static String siprofilPage = "/siprofilPage";
 }
