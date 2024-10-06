@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sibesi_app/constants/color_constant.dart';
 import 'package:sibesi_app/constants/text_style_constant.dart';
+import 'package:sibesi_app/utils/app_routes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PegawaiMenuWidget extends StatelessWidget {
   const PegawaiMenuWidget({super.key});
@@ -26,7 +28,7 @@ class PegawaiMenuWidget extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.siprofilPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/SiProfil.png",
@@ -48,7 +50,7 @@ class PegawaiMenuWidget extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.teladanPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Teladan.png",
@@ -68,7 +70,7 @@ class PegawaiMenuWidget extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  errorSnackBar();
+                  Get.toNamed(AppRoutes.teladanPage);
                 },
                 child: buildMenuColumn(
                   "assets/icons/Pengaduan.png",
@@ -89,8 +91,12 @@ class PegawaiMenuWidget extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {
-                  errorSnackBar();
+                onTap: () async {
+                  final Uri url = Uri.parse(
+                      'https://survei-bsk.kemenkumham.go.id/ly/VCqZJPAv');
+                  if (!await launchUrl(url)) {
+                    throw Exception('Could not launch $url');
+                  }
                 },
                 child: buildMenuColumn(
                   "assets/icons/survey.png",

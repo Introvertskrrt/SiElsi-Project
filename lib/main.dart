@@ -16,6 +16,7 @@ import 'package:sibesi_app/views/sigagak_views/detail_kegiatan_view.dart';
 import 'package:sibesi_app/views/sigagak_views/sigagak_view.dart';
 import 'package:sibesi_app/views/silabes_views/silabes_view.dart';
 import 'package:sibesi_app/views/sinamu_views/sinamu_view.dart';
+import 'package:sibesi_app/views/siprofil_views/siprofil_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/daftar_belanja_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/kesehatan_view.dart';
 import 'package:sibesi_app/views/siyasbi_views/pembinaan_view.dart';
@@ -140,6 +141,10 @@ void main() {
       GetPage(
         name: AppRoutes.socialmediaPage,
         page: () => const SocialmediaView(),
+      ),
+      GetPage(
+        name: AppRoutes.siprofilPage,
+        page: () => const SiprofilView(),
       ),
     ],
   ));
