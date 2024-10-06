@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:sibesi_app/utils/app_routes.dart';
 
@@ -6,6 +7,7 @@ class PengaduanController extends GetxController {
   var selectedGender = ''.obs;
   var age = 0.obs;
   var phoneNumber = ''.obs;
+  var nikNumber = 0.obs;
 
   final List<String> genderItems = ['Laki-Laki', 'Perempuan'];
 
@@ -15,18 +17,19 @@ class PengaduanController extends GetxController {
     if (fullName.isNotEmpty &&
         selectedGender.isNotEmpty &&
         age.value > 0 &&
-        phoneNumber.isNotEmpty) {
+        phoneNumber.isNotEmpty &&
+        nikNumber.value > 0) {
       isFormValid.value = true;
 
-      print("Nama Lengkap: ${fullName.value}");
-      print("Jenis Kelamin: ${selectedGender.value}");
-      print("Usia: ${age.value}");
-      print("Nomor HP: ${phoneNumber.value}");
-      Get.offAllNamed(AppRoutes.pengaduanTerlaporPage);
-
+      if (kDebugMode) {
+        print("Nama Lengkap: ${fullName.value}");
+        print("Nomor HP: ${phoneNumber.value}");
+        print("Usia: ${age.value}");
+        print("Jenis Kelamin: ${selectedGender.value}");
+        print("NIK: ${nikNumber.value}");
+      }
+      Get.toNamed(AppRoutes.pengaduanTerlaporPage);
       clearForm();
-      Get.snackbar("Sukses", "Data pengaduan berhasil dikirim",
-          snackPosition: SnackPosition.BOTTOM);
     } else {
       isFormValid.value = false;
       Get.snackbar("Error", "Tolong lengkapi semua data form",
@@ -43,6 +46,10 @@ class PengaduanController extends GetxController {
 
   void updateFullName(String name) {
     fullName.value = name;
+  }
+
+  void updateNik(int nik) {
+    nikNumber.value = nik;
   }
 
   void updateGender(String gender) {

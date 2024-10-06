@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:sibesi_app/constants/color_constant.dart';
 import 'package:sibesi_app/constants/text_style_constant.dart';
 import 'package:sibesi_app/controllers/pengaduan_controller.dart';
+import 'package:sibesi_app/utils/app_routes.dart';
 
 class FormWidget extends StatelessWidget {
   FormWidget({super.key});
@@ -42,6 +43,17 @@ class FormWidget extends StatelessWidget {
               ),
               const SizedBox(height: 10),
 
+              /// NIK KTP
+              _buildTextFieldLabel("Nomor Induk Kependudukan (NIK)"),
+              _buildTextField(
+                keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                onSaved: (value) => pengaduanController.updateNik(
+                  int.parse(value!),
+                ),
+              ),
+              const SizedBox(height: 10),
+
               /// Jenis Kelamin
               _buildTextFieldLabel("Jenis Kelamin"),
               _buildGenderDropdown(),
@@ -68,7 +80,6 @@ class FormWidget extends StatelessWidget {
               const SizedBox(height: 30),
               Center(
                 child: SizedBox(
-                  width: 80,
                   height: 30,
                   child: ElevatedButton(
                     style: ButtonStyle(
@@ -83,9 +94,10 @@ class FormWidget extends StatelessWidget {
                     ),
                     onPressed: () {
                       pengaduanController.submitForm();
+                      //Get.toNamed(AppRoutes.pengaduanTerlaporPage);
                     },
                     child: Text(
-                      "Kirim",
+                      "Selanjutnya",
                       style: TextStyleConstant.nunitoBold.copyWith(
                         fontSize: 12,
                         color: Colors.white,

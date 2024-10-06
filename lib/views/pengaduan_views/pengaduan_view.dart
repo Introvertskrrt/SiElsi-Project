@@ -12,41 +12,35 @@ class PengaduanView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConstant.primaryBackground,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.white,
-            size: 20,
-          ),
-          onPressed: () {
-            Get.back();
-          },
-        ),
-        title: Text(
-          'Teladan',
-          style: TextStyleConstant.nunitoSemiBold.copyWith(
-            fontSize: 20,
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: ColorConstant.primaryColor,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(56.0), // Default appBar height
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(20),
             bottomRight: Radius.circular(20),
           ),
+          child: AppBar(
+            iconTheme: const IconThemeData(color: Colors.white),
+            centerTitle: true,
+            backgroundColor: ColorConstant.primaryColor,
+            title: Text(
+              "Pengaduan",
+              style: TextStyleConstant.nunitoSemiBold
+                  .copyWith(color: Colors.white, fontSize: 20),
+            ),
+          ),
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 20),
-          HeaderWidget(),
-          SizedBox(height: 20),
-          FormWidget(),
-          SizedBox(height: 20),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            HeaderWidget(),
+            SizedBox(height: 20),
+            FormWidget(),
+            SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }

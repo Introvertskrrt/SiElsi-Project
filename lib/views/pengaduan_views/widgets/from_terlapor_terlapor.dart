@@ -84,6 +84,8 @@ class FormTerlaporWidget extends StatelessWidget {
           ),
         ),
         onPressed: () {
+          Get.snackbar("Laporan Diterima", "Kami akan segera memproses laporan anda!",
+              snackPosition: SnackPosition.BOTTOM);
           Get.toNamed(AppRoutes.dashboardKeluargaPage);
         },
         child: Text(
@@ -230,7 +232,7 @@ class FormTerlaporWidget extends StatelessWidget {
           ),
           SizedBox(
             height: 30,
-            child: GetBuilder<SinamuController>(
+            child: GetBuilder<PengaduanTerlaporController>(
               builder: (controller) {
                 return TextFormField(
                   controller:

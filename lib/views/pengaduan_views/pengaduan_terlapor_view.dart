@@ -24,7 +24,7 @@ class PengaduanTerlaporView extends StatelessWidget {
           },
         ),
         title: Text(
-          'Teladan',
+          'Pengaduan',
           style: TextStyleConstant.nunitoSemiBold.copyWith(
             fontSize: 20,
             color: Colors.white,

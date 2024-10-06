@@ -114,8 +114,9 @@ void main() {
         page: () => const PengaduanView(),
       ),
       GetPage(
-          name: AppRoutes.pengaduanTerlaporPage,
-          page: () => const PengaduanTerlaporView())
+        name: AppRoutes.pengaduanTerlaporPage,
+        page: () => const PengaduanTerlaporView(),
+      ),
       GetPage(
         name: AppRoutes.teladanPage,
         page: () => const TeladanView(),
